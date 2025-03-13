@@ -52,6 +52,11 @@ describe('Handling form submission', () => {
     formInput.value = 'Wash the dishes'
     const event = new dom.window.Event('submit')
     form.dispatchEvent(event)
+
+    // Debugging statements
+    console.log('Form submitted')
+    console.log('Task list content:', taskList.textContent)
+
     expect(taskList.textContent).to.include('Wash the dishes')
   })
 })
